@@ -5,11 +5,6 @@ atom-text-editor, .item-view, .release-notes, .settings-view, .preview-pane {
   background: -webkit-linear-gradient(top,  rgba(255,255,255,0.025) 0%,rgba(11,11,12,0.47) 15%,rgba(0,0,0,0.51) 25%, rgba(0,0,0,0.9) 50%, rgba(0,0,0,1) 100%) !important;
 }
 
-// make gutter background same as editor
-atom-text-editor .gutter, :host .gutter {
-  background-color: inherit !important;
-}
-
 atom-text-editor[mini], atom-text-editor[mini]::shadow {
   color: @text-color-highlight;
   background-color: @input-background-color;
@@ -25,11 +20,4 @@ atom-text-editor[mini], atom-text-editor[mini]::shadow {
 atom-text-editor[mini].is-focused, atom-text-editor[mini].is-focused::shadow {
   background-color: lighten(@input-background-color, 5%);
   .selection .region { background-color: desaturate(@background-color-info, 50%); }
-}
-
-// FIXME: these should go in syntax themes?
-atom-text-editor, atom-text-editor::shadow {
-  .gutter.drop-shadow {
-    -webkit-box-shadow: -2px 0 10px 2px #222;
-  }
 }

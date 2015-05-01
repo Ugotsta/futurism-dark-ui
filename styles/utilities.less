@@ -19,3 +19,24 @@
   .text(highlight);
   background: @background-color-highlight;
 }
+
+// hack for Neon comments
+atom-text-editor .comment,
+:host .comment {
+  font-weight: normal;
+  font-style: italic;
+  color: #666 !important;
+  text-shadow: 0px 0px 0px #000 !important;
+}
+
+//gutter
+atom-text-editor .gutter, :host .gutter {
+  background-color: rgba(0,0,0,0) !important;
+}
+
+// hide scrollbar in editor
+atom-text-editor .vertical-scrollbar,
+atom-text-editor::shadow .vertical-scrollbar {
+  opacity: 0;
+  width: 0;
+}

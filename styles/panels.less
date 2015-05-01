@@ -60,3 +60,111 @@ atom-panel, .tool-panel {
     .btn-background(@bg, @hover, @selected, @text);
   }
 }
+
+// Settings panel
+
+.panels-menu.nav .active a {
+  color: #00A2FF !important;
+  background: rgba(0, 170, 255, 0.1) !important;
+  box-shadow: inset 0px 0px 8px 0px rgba(0, 170, 255, 0.7);
+}
+
+.panels-menu.nav a {
+  color: #00A2FF !important;
+}
+
+.panels-menu.nav a:hover {
+  color: #00A2FF !important;
+  background: rgba(0, 170, 255, 0.1) !important;
+  box-shadow: inset 0px 0px 8px 0px rgba(0, 170, 255, 0.7);
+}
+
+.config-menu {
+
+  box-shadow: inset 0px 0px 10px 0px rgba(0,0,0,0.7);
+  background-color: rgba(0, 170, 255, 0.1);
+  background: -webkit-linear-gradient(top,  rgba(0,162,255,0.08) 0%,rgba(0,162,255,0.19) 13%,rgba(0,162,255,0.27) 31%,rgba(0,162,255,0.29) 41%,rgba(0,162,255,0.31) 53%,rgba(0,162,255,0.27) 66%,rgba(0,162,255,0.22) 80%,rgba(0,162,255,0.18) 93%,rgba(0,162,255,0.08) 100%);
+  -webkit-animation: tree-view-bg 2s infinite;
+
+  button {
+    border-radius: 5px;
+    background: none;
+    border: 2px #fff;
+    color: @text-color-highlight;
+  }
+
+  button:hover {
+    color: #00A2FF !important;
+    background: rgba(0, 170, 255, 0.1) !important;
+    box-shadow: inset 0px 0px 8px 0px rgba(0, 170, 255, 0.7);
+  }
+}
+
+//
+// SEARCH PANEL
+//
+
+ol.results-view.list-tree {
+  color: rgba(0, 255, 0, 0.8);
+  background-color: rgba(0, 170, 0, 0.1);
+  background: -webkit-linear-gradient(top,  rgba(0,162,0,0.08) 0%,rgba(0,162,0,0.19) 13%,rgba(0,162,0,0.27) 31%,rgba(0,162,0,0.29) 41%,rgba(0,162,0,0.31) 53%,rgba(0,162,0,0.27) 66%,rgba(0,162,0,0.22) 80%,rgba(0,162,0,0.18) 93%,rgba(0,162,0,0.08) 100%);
+}
+
+div.path-details.list-item {
+  background-color: rgba(0, 170, 0, 0.2);
+  -webkit-box-shadow: inset 0px 0px 4px 0px rgba(0, 170, 0, 0.6);
+  text-shadow: 0px 0px 4px rgba(0, 50, 0, 0.3) !important;
+  color: #0c0 !important;
+}
+
+li.search-result span {
+  color: #0c0;
+  text-shadow: 0px 0px 4px rgba(0, 255, 0, 0.5);
+}
+
+ul.matches.list-tree {
+  color: #f00 !important;
+}
+
+li.search-result.list-item.selected::before {
+  background-color: rgba(0, 255, 0, 0.05) !important;
+  -webkit-box-shadow: inset 0px 0px 4px 0px rgba(0, 170, 0, 0.4);
+}
+
+span.match.highlight-info {
+  background-color: #0d0;
+  -webkit-box-shadow: 0px 0px 6px #0f0;
+  color: #030;
+}
+
+
+//
+//  TERMINAL
+//
+
+.cli-status .terminal {
+  color: rgba(0, 255, 0, 0.8);
+  text-shadow: 0px 0px 6px rgba(0, 255, 0, 0.5);
+  background-color: rgba(0, 170, 0, 0.1);
+  background: -webkit-linear-gradient(top,  rgba(0,162,0,0.08) 0%,rgba(0,162,0,0.19) 13%,rgba(0,162,0,0.27) 31%,rgba(0,162,0,0.29) 41%,rgba(0,162,0,0.31) 53%,rgba(0,162,0,0.27) 66%,rgba(0,162,0,0.22) 80%,rgba(0,162,0,0.18) 93%,rgba(0,162,0,0.08) 100%);
+}
+
+.cli-status .terminal::-webkit-scrollbar-track {
+  background: #010 !important;
+}
+
+.cli-status .terminal::-webkit-scrollbar-thumb {
+  -webkit-box-shadow: 0px 0px 8px rgba(0,255,0,0.3);
+  background: #090 !important;
+  -webkit-animation: background 5s;
+}
+
+.cli-status .terminal::-webkit-scrollbar-thumb:hover {
+  -webkit-box-shadow: 0px 0px 8px rgba(0,255,0,0.5);
+  background: #0f0 !important;
+  -webkit-animation: background 5s;
+}
+
+.panel.cli-status ::selection {
+  background: rgba(0, 255, 0, 0.3) !important;
+}

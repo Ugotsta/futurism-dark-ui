@@ -1,8 +1,7 @@
 @import "ui-variables";
-@tab-radius: 3px;
+@tab-radius: 5px;
 @modified-icon-width: 8px;
-@tab-skew: 30deg;
-@tab-top-padding: 5px;
+@tab-top-padding: 3px;
 @tab-bottom-border-height: 5px;
 @tab-border: 1px solid @tab-border-color;
 @tab-bar-bottom-border-color: #111;
@@ -12,7 +11,7 @@
   height: @tab-height + @tab-top-padding + @tab-bottom-border-height;
   background: @tab-bar-background-color;
   box-shadow: inset 0 -8px 8px -4px rgba(0,0,0, .15);
-  padding: 0 10px 0 25px;
+  padding: 0 10px 0 10px;
   overflow-x: auto;
   overflow-y: hidden;
 
@@ -64,7 +63,6 @@
       left: -14px;
       border-top-left-radius: @tab-radius;
       box-shadow: inset 1px 1px 0 @tab-border-color, -4px 0px 4px rgba(0,0,0,.1);
-      -webkit-transform: skewX(-@tab-skew);
     }
 
     // right angled edge
@@ -72,7 +70,6 @@
       right: -14px;
       border-top-right-radius: @tab-radius;
       box-shadow: inset -1px 1px 0 @tab-border-color, 4px 0px 4px rgba(0,0,0,.1);
-      -webkit-transform: skewX(@tab-skew);
     }
 
     .close-icon {
