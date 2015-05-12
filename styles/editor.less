@@ -2,22 +2,39 @@
 @import "ui-mixins";
 
 atom-text-editor, .item-view, .release-notes, .settings-view, .preview-pane {
-  background: -webkit-linear-gradient(top,  rgba(255,255,255,0.025) 0%,rgba(11,11,12,0.47) 15%,rgba(0,0,0,0.51) 25%, rgba(0,0,0,0.9) 50%, rgba(0,0,0,1) 100%) !important;
+  padding-top: 1px;
+  background: -webkit-linear-gradient(top,  rgba(255,255,255,0.025) 0%,rgba(11,11,12,0.47) 15%,rgba(0,0,0,0.51) 25%, rgba(0,0,0,0.9) 50%, rgba(0,0,0,1) 100%);
 }
 
-atom-text-editor[mini], atom-text-editor[mini]::shadow {
-  color: @text-color-highlight;
-  background-color: @input-background-color;
+atom-text-editor.mini, atom-text-editor.mini::shadow {
+  color: @futurism-color;//@text-color-highlight;
+  background: -webkit-linear-gradient(top,  rgba(0,162,255,0.10) 3%,rgba(0,162,255,0.25) 15%,rgba(0,162,255,0.35) 31%,rgba(0,162,255,0.37) 41%,rgba(0,162,255,0.39) 53%,rgba(0,162,255,0.35) 66%,rgba(0,162,255,0.29) 80%,rgba(0,162,255,0.22) 93%,rgba(0,162,255,0.10) 100%);
   border: 1px solid @input-border-color;
-  box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+  box-shadow: inset 0px 0px 4px 0px rgba(0, 0, 0, 0.5);
   border-radius: @component-border-radius;
   padding-left: @component-padding/2;
 
   .cursor { border-color: #fff; }
   .selection .region { background-color: lighten(@input-background-color, 10%); }
+  .placeholder-text { color: darken(@futurism-color, 50%);}
+
+  // hide scrollbar in mini editor
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
 }
 
-atom-text-editor[mini].is-focused, atom-text-editor[mini].is-focused::shadow {
-  background-color: lighten(@input-background-color, 5%);
+atom-text-editor.mini.is-focused, atom-text-editor.mini.is-focused::shadow {
+  //background-color: lighten(@input-background-color, 5%);
+  box-shadow: inset 0px 0px 8px 0px rgba(0, 170, 255, 0.7);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.75);
   .selection .region { background-color: desaturate(@background-color-info, 50%); }
+}
+
+// hide scrollbar in editor
+atom-text-editor .vertical-scrollbar,
+atom-text-editor::shadow .vertical-scrollbar {
+  opacity: 0;
+  width: 0;
 }

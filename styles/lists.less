@@ -6,6 +6,7 @@
   li:not(.list-nested-item),
   li.list-nested-item > .list-item {
     .text(normal);
+    color: @futurism-color;
   }
 
   .generate-list-item-text-color(@class) {
@@ -21,15 +22,15 @@
   .generate-list-item-text-color(error);
   .generate-list-item-text-color(selected);
 
-  .generate-list-item-status-color(@color, @status) {
+  .generate-list-item-status-color(@futurism-color, @status) {
     li:not(.list-nested-item).status-@{status},
     li.list-nested-item.status-@{status} > .list-item {
-      color: @color;
+      color: @futurism-color;
     }
 
     li:not(.list-nested-item).selected.status-@{status},
     li.list-nested-item.selected.status-@{status} > .list-item {
-      color: @color;
+      color: @futurism-color;
     }
   }
 
@@ -47,18 +48,28 @@
 
 .select-list ol.list-group,
 &.select-list ol.list-group {
+  color: @futurism-color;
+  text-shadow: 0px 0px 8px rgba(0, 170, 255, 0.5);
+  box-shadow: inset 0px 0px 10px 0px rgba(0,0,0,0.7);
+  background-color: rgba(0, 170, 255, 0.1);
+  background: -webkit-linear-gradient(top,  rgba(0,162,255,0.08) 0%,rgba(0,162,255,0.19) 13%,rgba(0,162,255,0.27) 31%,rgba(0,162,255,0.29) 41%,rgba(0,162,255,0.31) 53%,rgba(0,162,255,0.27) 66%,rgba(0,162,255,0.22) 80%,rgba(0,162,255,0.18) 93%,rgba(0,162,255,0.08) 100%) !important;
   li.two-lines {
-    .secondary-line { color: @text-color-subtle; }
+    .secondary-line { color: @futurism-color; }
     &.selected .secondary-line {
-      color: @text-color;
-      text-shadow: none;
+      color: @futurism-color;
     }
+  }
+
+  .key-binding {
+    background: @futurism-color;
+    color: #000;
   }
 
   // We want to highlight the background of the list items because we dont
   // know their size.
   li.selected {
-    background-color: @background-color-selected;
+    background: rgba(0, 170, 255, 0.1) !important;
+    box-shadow: inset 0px 0px 8px 0px rgba(0, 170, 255, 0.7);
     &:before{ display: none; }
   }
 
@@ -84,18 +95,20 @@
       .octicon(check, @active-icon-size);
       &:before {
         margin-right: @component-icon-padding;
-        color: @text-color-success;
+        color: @futurism-color;//text-color-success;
       }
     }
   }
 }
 
 .select-list.popover-list {
-  background-color: @overlay-background-color;
-  box-shadow: 0 0 10px @base-border-color;
+  color: @futurism-color;
+  text-shadow: 0px 0px 8px rgba(0, 170, 255, 0.5);
+  box-shadow: inset 0px 0px 10px 0px rgba(0,0,0,0.7);
+  background-color: rgba(0, 170, 255, 0.1);
+  background: -webkit-linear-gradient(top,  rgba(0,162,255,0.08) 0%,rgba(0,162,255,0.19) 13%,rgba(0,162,255,0.27) 31%,rgba(0,162,255,0.29) 41%,rgba(0,162,255,0.31) 53%,rgba(0,162,255,0.27) 66%,rgba(0,162,255,0.22) 80%,rgba(0,162,255,0.18) 93%,rgba(0,162,255,0.08) 100%) !important;
   padding: @component-padding/2;
   border-radius: @component-border-radius;
-  border: 1px solid @overlay-border-color;
 
   atom-text-editor {
     margin-bottom: @component-padding/2;
@@ -121,10 +134,10 @@
 li.ui-draggable-dragging, li.ui-sortable-helper {
   line-height: @component-line-height;
   height: @component-line-height;
-  border: 0;
+  border: none;
   border-radius: 0;
   list-style: none;
   padding: 0 @component-padding;
   background: @background-color-highlight;
-  box-shadow: 0 0 1px @base-border-color;
+  box-shadow: 0 0 1px red;
 }

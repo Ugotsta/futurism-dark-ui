@@ -1,17 +1,17 @@
 @import "ui-variables";
 @tab-radius: 5px;
 @modified-icon-width: 8px;
-@tab-top-padding: 3px;
-@tab-bottom-border-height: 5px;
+@tab-top-padding: 5px;
+@tab-bottom-border-height: 2px;
 @tab-border: 1px solid @tab-border-color;
 @tab-bar-bottom-border-color: #111;
 @tab-max-width: 160px;
 
 .tab-bar {
   height: @tab-height + @tab-top-padding + @tab-bottom-border-height;
-  background: @tab-bar-background-color;
-  box-shadow: inset 0 -8px 8px -4px rgba(0,0,0, .15);
-  padding: 0 10px 0 10px;
+  background: -webkit-linear-gradient(top,  rgba(0,162,255,0.08) 0%,rgba(0,162,255,0.19) 13%,rgba(0,162,255,0.27) 31%,rgba(0,162,255,0.29) 41%,rgba(0,162,255,0.31) 53%,rgba(0,162,255,0.27) 66%,rgba(0,162,255,0.22) 80%,rgba(0,162,255,0.18) 93%,rgba(0,162,255,0.08) 100%) !important;
+  box-shadow: inset 0px 0px 6px rgba(0,0,0, .35);
+  padding: 0 1px 0 1px;
   overflow-x: auto;
   overflow-y: hidden;
 
@@ -27,8 +27,6 @@
     left: 0;
     right: 0;
     background-color: @tab-background-color-active;
-    border-top: 1px solid @tab-border-color;
-    border-bottom: 1px solid @tab-bar-bottom-border-color;
     pointer-events: none;
   }
 
@@ -39,14 +37,15 @@
     height: @tab-height;
     line-height: @tab-height;
     padding: 0;
-    margin: 0 20px 0 5px;
-    color: @text-color;
+    margin: 0 2px 0 2px;
+    color: @text-color-highlight;
+    border-radius: 4px 4px 0 0;
+    box-shadow: inset 0px 0px 8px 0px rgba(0, 170, 255, 0.7);
 
     transition: color .1s ease-in;
     border: none;
 
     &, &:before, &:after {
-      background-image: -webkit-linear-gradient(top, lighten(#333, 7%), #333);
       height: @tab-height;
     }
 
@@ -58,26 +57,13 @@
       height: @tab-height;
     }
 
-    // left angled edge
-    &:before {
-      left: -14px;
-      border-top-left-radius: @tab-radius;
-      box-shadow: inset 1px 1px 0 @tab-border-color, -4px 0px 4px rgba(0,0,0,.1);
-    }
-
-    // right angled edge
-    &:after {
-      right: -14px;
-      border-top-right-radius: @tab-radius;
-      box-shadow: inset -1px 1px 0 @tab-border-color, 4px 0px 4px rgba(0,0,0,.1);
-    }
-
     .close-icon {
       right: 0;
       z-index: 3;
       text-align: right;
       line-height: @tab-height;
-      color: @text-color;
+      color: @text-color-highlight;
+      padding-right: 5px;
 
       &:hover {
         color: inherit;
@@ -98,43 +84,22 @@
     .title{
       position: relative;
       z-index: 1;
-      padding-right: 10px
+      padding-right: 10px;
+      padding-left: 5px;
     }
   }
 
   .tab.active {
     z-index: 1;
-    color: @text-color-highlight;
-    box-shadow: inset -1px 1px 0 @tab-border-color, 4px -4px 4px rgba(0,0,0,.1);
+    background-color: rgba(0, 170, 255, 0.25);
+    border-radius: 4px 4px 0 0;
+    box-shadow: inset 0px 0px 8px 0px rgba(0, 170, 255, 0.7);
+    text-shadow: 1px 1px 4px #000;
+    height: @tab-height + 1px;
 
     .close-icon {
       line-height: @tab-height - 1px;
-      color: @text-color;
-    }
-
-    &, &:before, &:after {
-      background-image: -webkit-linear-gradient(top, lighten(@tab-background-color-active, 7%), @tab-background-color-active);
-      height: @tab-height + 1px;
-    }
-
-    &:before {
-      box-shadow: inset 1px 1px 0 @tab-border-color, -4px -4px 4px rgba(0,0,0,.1);
-    }
-
-    &:after {
-      box-shadow: inset -1px 1px 0 @tab-border-color, 4px -4px 4px rgba(0,0,0,.1);
-    }
-  }
-
-  .tab:hover {
-    color: @text-color-highlight;
-  }
-
-  .tab.active:hover .close-icon {
-    color: @text-color;
-
-    &:hover {
-      color: inherit;
+      color: @futurism-color;
     }
   }
 

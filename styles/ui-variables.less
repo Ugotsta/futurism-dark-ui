@@ -5,6 +5,9 @@
   100% { opacity: 0.9; }
 }
 
+// Futurism theme color
+@futurism-color: #00A2FF;
+
 // Colors
 
 @text-color: #aaa;
@@ -38,7 +41,7 @@
 @pane-item-background-color: @base-background-color;
 @pane-item-border-color: rgba(0, 0, 0, 0.5);
 
-@input-background-color: #212224;
+@input-background-color: @futurism-color;// #212224;
 @input-border-color: @base-border-color;
 
 @tool-panel-background-color: #1d1f21;
@@ -61,14 +64,14 @@
 @tab-bar-background-color: #222;
 @tab-bar-border-color: darken(@tab-background-color-active, 10%);
 @tab-background-color: #333;
-@tab-background-color-active: #222;
-@tab-border-color: #484848;
+@tab-background-color-active: @futurism-color;
+@tab-border-color: @futurism-color;
 
 @tree-view-background-color: @tool-panel-background-color;
 @tree-view-border-color: @tool-panel-border-color;
 
-@scrollbar-background-color: #222425; // Needs to be opaque -> atom/atom/issues/4578
-@scrollbar-color: rgba(92, 92, 92, 0.5);
+@scrollbar-background-color: #001020; // Needs to be opaque -> atom/atom/issues/4578
+@scrollbar-color: rgba(70, 203, 255, 0.9);
 
 @ui-site-color-1: @background-color-success; // green
 @ui-site-color-2: @background-color-info; // blue
