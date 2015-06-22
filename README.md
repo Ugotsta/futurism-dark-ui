@@ -2,7 +2,7 @@
 
 A futuristic, dark UI theme for Atom, based on and utilizing code and colors from Neon syntax theme, Neon cursor and Neon selection. The theme is rather heavy, making extensive use of gradients.
 
-![](https://raw.githubusercontent.com/Ugotsta/ugotsta.github.io/master/img/futurism-ui.png)
+![](https://raw.githubusercontent.com/Ugotsta/Ugotsta.github.io/master/images/projects/futurism-ui.png)
 
 Best used with Futurism syntax theme (which is a slightly edited fork of Neon syntax theme) here:
 https://github.com/Ugotsta/futurism-dark-syntax
