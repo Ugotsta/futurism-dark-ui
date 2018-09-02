@@ -1,7 +1,7 @@
 {
   "name": "futurism-ui",
   "theme": "ui",
-  "version": "0.5.0",
+  "version": "1.0.0",
   "description": "Futurism UI theme for Atom editor.",
   "keywords": [
     "syntax",
