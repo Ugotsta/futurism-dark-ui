@@ -21,24 +21,6 @@
   //background-color: @futurism-color;
 }
 
-atom-text-editor, .item-view, .release-notes, .settings-view, .preview-pane {
-  select {
-    color: @futurism-color !important;
-    background-color: #000 !important;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.75);
-    background: -webkit-linear-gradient(top,  rgba(0,162,255,0.08) 0%,rgba(0,162,255,0.19) 13%,rgba(0,162,255,0.27) 31%,rgba(0,162,255,0.29) 41%,rgba(0,162,255,0.31) 53%,rgba(0,162,255,0.27) 66%,rgba(0,162,255,0.22) 80%,rgba(0,162,255,0.18) 93%,rgba(0,162,255,0.08) 100%);
-    border: 1px solid @input-border-color;
-    box-shadow: inset 0px 0px 8px 0px rgba(0, 170, 255, 0.7);
-    border-radius: @component-border-radius;
-  }
-
-  input {
-    background-color: @futurism-color !important;
-    border: 1px solid @input-border-color;
-    box-shadow: inset 0px 0px 8px 0px rgba(0, 0, 0, 0.6);
-  }
-}
-
 //
 //  SCROLLBARS
 //
@@ -62,16 +44,14 @@ atom-text-editor, .item-view, .release-notes, .settings-view, .preview-pane {
 }
 
 // special minimap gradient
-atom-text-editor::shadow atom-text-editor-minimap::shadow .minimap-visible-area,
-atom-text-editor atom-text-editor-minimap::shadow .minimap-visible-area {
+atom-text-editor atom-text-editor-minimap .minimap-visible-area {
   background: -webkit-linear-gradient(top,  rgba(70, 203, 255, 0) 0%, rgba(70, 203, 255, .8) 15%, rgba(70, 203, 255, 1) 19%,rgba(70, 203, 255, 1) 29%,rgba(70, 203, 255, 1) 70%, rgba(70, 203, 255, 1) 81%, rgba(70, 203, 255, .8) 85%,rgba(0,7,237,0) 100%);
   opacity: 0.3;
   transition: opacity 0.6s ease;
 }
 
-// special minimap gradient
-atom-text-editor::shadow atom-text-editor-minimap::shadow .minimap-visible-area:hover,
-atom-text-editor atom-text-editor-minimap::shadow .minimap-visible-area:hover {
+// minimap hover
+atom-text-editor atom-text-editor-minimap .minimap-visible-area:hover {
   opacity: 0.6;
 }
 
